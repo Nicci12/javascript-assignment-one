@@ -15,3 +15,7 @@ return `You Win! ${playerSelection} beats ${computerSelection}`
 return `You Lose! ${computerSelection} beats ${playerSelection}`
 }
 }
+
+const playerSelection = 'rock';
+const computerSelection = computerPlay();
+console.log(playRound(playerSelection, computerSelection));
