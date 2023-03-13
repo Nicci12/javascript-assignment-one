@@ -24,7 +24,10 @@ function game() {
     let computerScore = 0;
   
     for (let i = 0; i < 5; i++) {
-      const playerSelection = prompt("Rock, paper, or scissors?");
+      let playerSelection = "";
+      while (playerSelection === null || playerSelection === "") {
+        playerSelection = prompt("Rock, paper, or scissors?");
+      }
       const computerSelection = computerPlay();
       const roundResult = playRound(playerSelection, computerSelection);
   
@@ -48,4 +51,5 @@ function game() {
       console.log("It's a tie!");
     }
   }
-game()
+
+game();
